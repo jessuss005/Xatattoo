@@ -18,7 +18,7 @@ def create_stencil_cv2(image_data, threshold=50):
         if img is None:
             raise ValueError("No se pudo decodificar la imagen")
         
-        # Redimensionar si es necesario
+        # Redimensionar si es necesario hola hola
         height, width = img.shape[:2]
         if height > 1000 or width > 1000:
             scale = 1000 / max(height, width)
