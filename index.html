@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Esténcil para Tatuajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Generador de Esténcil para Tatuajes</h1>
+        <p>Sube una imagen y conviértela en un esténcil listo para tatuar</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+                <span class="upload-icon">📁</span>
+                <p>Haz clic aquí o arrastra una imagen</p>
+                <small>Formatos soportados: JPG, PNG, JPEG</small>
+            </div>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="controls" id="controls" style="display: none;">
+            <div class="slider-container">
+                <label for="edgeThreshold">Intensidad de bordes:</label>
+                <input type="range" id="edgeThreshold" min="1" max="100" value="50">
+                <span id="thresholdValue">50</span>
+            </div>
+            
+            <button id="generateBtn">Generar Esténcil</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <div class="image-comparison">
+                <div class="image-box">
+                    <h3>Imagen Original</h3>
+                    <img id="originalImage" alt="Imagen original">
+                </div>
+                <div class="image-box">
+                    <h3>Esténcil Generado</h3>
+                    <img id="stencilImage" alt="Esténcil generado">
+                    <button id="downloadBtn">⬇️ Descargar Esténcil</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Procesando imagen...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
